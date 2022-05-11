@@ -1,3 +1,4 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment, useEffect, useState } from 'react';
 import AddSkill from '../components/modales/addSkill';
 import Sidebar from '../components/sidebar';
@@ -5,7 +6,6 @@ import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import TablaEstudios from '../components/tablaEstudios';
 import TabalaExperiencia from '../components/tablaExperiencia';
-import { URL_SERVICIOS } from '../config/config';
 
 const EditarPerfil = ({ setLogeado, cargar }) => {
   const imgURL = URL_SERVICIOS+'/uploads/';

@@ -1,3 +1,4 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import BootstrapTable from 'react-bootstrap-table-next';
@@ -5,7 +6,6 @@ import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import Sidebar from '../components/sidebar';
 const { SearchBar, ClearSearchButton } = Search;
-import { URL_SERVICIOS } from '../config/config';
 
 const AdminUsers = ({ setLogeado }) => {
     const user = JSON.parse(window.localStorage.getItem('user'));

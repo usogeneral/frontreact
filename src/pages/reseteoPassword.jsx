@@ -1,9 +1,9 @@
+import { URL_SERVICIOS } from '../config/config';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 
 import image from '../assets/worker.jpg';
-import { URL_SERVICIOS } from '../config/config';
 
 function ReseteoPassword() {
   const user = JSON.parse(window.localStorage.getItem('user'));

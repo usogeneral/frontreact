@@ -1,3 +1,4 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,7 +7,6 @@ import 'moment/locale/es';
 
 import ListaOfertas from '../components/listaOfertas';
 import './pages.css';
-import { URL_SERVICIOS } from '../config/config';
 
 const Main = ({ logeado, busqueda }) => {
   moment.locale('es');

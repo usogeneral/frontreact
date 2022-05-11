@@ -1,6 +1,6 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { useState, useEffect, Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
-import { URL_SERVICIOS } from '../config/config';
 
 
 const Perfil = ({ location }) => {

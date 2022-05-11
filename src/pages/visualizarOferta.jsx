@@ -1,3 +1,4 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 import moment from 'moment';
@@ -5,7 +6,6 @@ import 'moment/locale/es';
 
 import ListaPersonas from '../components/listaPersonas';
 import Sidebar from '../components/sidebar';
-import { URL_SERVICIOS } from '../config/config';
 
 const VisualizarOferta = ({ setLogeado, location }) => {
   moment.locale('es');

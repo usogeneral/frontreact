@@ -1,7 +1,7 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment, useState } from 'react';
 import image from '../assets/worker.jpg';
 import { useHistory } from 'react-router-dom';
-import { URL_SERVICIOS } from '../config/config';
 
 const Registro = () => {
   const user = JSON.parse(window.localStorage.getItem('user'));

@@ -1,3 +1,4 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment, useState, useEffect } from 'react';
 import AñadirOferta from '../components/añadirOferta';
 import Sidebar from '../components/sidebar';
@@ -6,7 +7,6 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 const { SearchBar, ClearSearchButton } = Search;
-import { URL_SERVICIOS } from '../config/config';
 
 
 const Dashboard = ({ setLogeado, logeado, cargar }) => {
