@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import './components.css';
 import { Link } from 'react-router-dom';
+import { URL_SERVICIOS } from '../config/config';
 
 const ListaOfertas = ({ oferta, logeado }) => {
 
@@ -27,7 +28,7 @@ const ListaOfertas = ({ oferta, logeado }) => {
                     headers: { 'Content-Type': 'application/json', 'x-token': user.token },
                     body: JSON.stringify(oferta)
                 };
-                const response = await fetch('http://localhost:4000/api/postulante/' + oferta._id, requestOptions);
+                const response = await fetch(URL_SERVICIOS+'/api/postulante/' + oferta._id, requestOptions);
                 const data = await response.json();
                 if (data.ok === true) {
                     alert("Su postulación se ha realizado correctamente");

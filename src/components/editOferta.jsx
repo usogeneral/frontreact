@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Sidebar from './sidebar';
+import { URL_SERVICIOS } from '../config/config';
 
 const EditarOferta = ({ location, setLogeado, setCargar }) => {
   const history = useHistory();
@@ -36,7 +37,7 @@ const EditarOferta = ({ location, setLogeado, setCargar }) => {
       body: JSON.stringify(oferta),
     };
     const response = await fetch(
-      'http://localhost:4000/api/oferta/' + oft._id,
+      URL_SERVICIOS+'/api/oferta/' + oft._id,
       requestOptions
     );
     const data = await response.json();

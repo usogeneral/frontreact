@@ -1,8 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { URL_SERVICIOS } from '../config/config';
 
 const ListaPersonas = ({ persona, metodoContratar }) => {
-    const imgURL = "http://localhost:4000/uploads/";
+    const imgURL = URL_SERVICIOS+"/uploads/";
     const linkwhatsapp = 'https://web.whatsapp.com/send?phone=593';
     const [celular, setcelular] = useState("")
 
@@ -52,7 +53,7 @@ const ListaPersonas = ({ persona, metodoContratar }) => {
             headers: { 'Content-Type': 'application/json' },
         };
         const response = await fetch(
-            'http://localhost:4000/api/usuarios/' + persona.postulante,
+            URL_SERVICIOS+'/api/usuarios/' + persona.postulante,
             requestOptions
         );
         const data = await response.json();

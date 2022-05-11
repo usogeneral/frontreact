@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 import Sidebar from './sidebar';
+import { URL_SERVICIOS } from '../config/config';
 
 const VerPerfil = ({ logeado, setLogeado }) => {
   const history = useHistory();
@@ -10,7 +11,7 @@ const VerPerfil = ({ logeado, setLogeado }) => {
     history.push('/');
   }
   const linkwhatsapp = 'https://web.whatsapp.com/send?phone=593';
-  const imgURL = 'http://localhost:4000/uploads/';
+  const imgURL = URL_SERVICIOS+'/uploads/';
   const celular = user.usuarioDB.numeroDeCelular.slice(1);
 
   return (

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { URL_SERVICIOS } from '../config/config';
 
 const TablaOfertas = ({ oferta, metodoCargarDatos }) => {
   const user = JSON.parse(window.localStorage.getItem('user'));
@@ -12,7 +13,7 @@ const TablaOfertas = ({ oferta, metodoCargarDatos }) => {
                 'x-token': user.token
             }
         };
-        const response = await fetch('http://localhost:4000/api/oferta/' + oferta._id, requestOptions);
+        const response = await fetch(URL_SERVICIOS+'/api/oferta/' + oferta._id, requestOptions);
         const data = await response.json();
         metodoCargarDatos()
         // alert(oferta._id)

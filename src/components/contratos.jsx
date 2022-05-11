@@ -6,6 +6,7 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import Sidebar from './sidebar';
 import DatosUsuario from './modales/datosUsuario';
 const { SearchBar, ClearSearchButton } = Search;
+import { URL_SERVICIOS } from '../config/config';
 
 const Contratos = ({ setLogeado }) => {
   const user = JSON.parse(window.localStorage.getItem('user'));
@@ -25,7 +26,7 @@ const Contratos = ({ setLogeado }) => {
       headers: { 'Content-Type': 'application/json' },
     };
     const response = await fetch(
-      'http://localhost:4000/api/usuarios/' + postulante,
+      URL_SERVICIOS+'/api/usuarios/' + postulante,
       requestOptions
     );
     const data = await response.json();
@@ -104,7 +105,7 @@ const Contratos = ({ setLogeado }) => {
         headers: { 'Content-Type': 'application/json' },
       };
       const resp = await fetch(
-        'http://localhost:4000/api/oferta/usuario/contratos/' +
+        URL_SERVICIOS+'/api/oferta/usuario/contratos/' +
           user.usuarioDB.uid,
         requestOptions
       );
@@ -123,7 +124,7 @@ const Contratos = ({ setLogeado }) => {
       body: JSON.stringify(oferta),
     };
     const response = await fetch(
-      'http://localhost:4000/api/oferta/' + oferta._id,
+      URL_SERVICIOS+'/api/oferta/' + oferta._id,
       requestOptions
     );
     const data = await response.json();

@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { URL_SERVICIOS } from '../../config/config';
 
 const DatosUsuario = ({ userId, nombreUser }) => {
     const [celular, setcelular] = useState("");
@@ -49,7 +50,7 @@ const DatosUsuario = ({ userId, nombreUser }) => {
             headers: { 'Content-Type': 'application/json' },
         };
         const response = await fetch(
-            'http://localhost:4000/api/usuarios/' + userId,
+            URL_SERVICIOS+'/api/usuarios/' + userId,
             requestOptions
         );
         const data = await response.json();
