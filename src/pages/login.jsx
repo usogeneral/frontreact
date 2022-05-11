@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import image from '../assets/worker.jpg';
-import { URL_SERVICIOS } from './config/config';
+import { URL_SERVICIOS } from '../config/config';
 
 
 const LoginPage = ({ setLogeado }) => {
