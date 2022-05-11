@@ -1,0 +1,1 @@
+export const URL_SERVICIOS = 'https://jobstesis.herokuapp.com';

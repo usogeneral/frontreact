@@ -21,6 +21,7 @@ import AdminOfertas from './pages/adminOfertas';
 import EditarExperiencia from './components/modales/editarExperiencia';
 import EditarEstudios from './components/modales/editarEstudios';
 import MisContratos from './pages/misContratos';
+import { URL_SERVICIOS } from './config/config';
 
 const App = () => {
   const user = JSON.parse(window.localStorage.getItem('user'));
@@ -38,7 +39,7 @@ const App = () => {
       },
       body: JSON.stringify(useredit.usuarioDB)
     };
-    const response = await fetch('http://localhost:4000/api/usuarios/' + useredit.usuarioDB.uid, requestOptions);
+    const response = await fetch(URL_SERVICIOS+'/api/usuarios/' + useredit.usuarioDB.uid, requestOptions);
     const data = await response.json();
     if (data.ok) {
       window.localStorage.setItem('user', JSON.stringify(data));
@@ -56,7 +57,7 @@ const App = () => {
       };
       if (logeado) {
         const response = await fetch(
-          'http://localhost:4000/api/oferta//usuario/busqueda/' + texto + '/' + user.usuarioDB.uid,
+          URL_SERVICIOS+'/api/oferta//usuario/busqueda/' + texto + '/' + user.usuarioDB.uid,
           requestOptions
         );
         const data = await response.json();
@@ -65,7 +66,7 @@ const App = () => {
 
       if (!logeado) {
         const response = await fetch(
-          'http://localhost:4000/api/oferta/busqueda/' + texto,
+          URL_SERVICIOS+'/api/oferta/busqueda/' + texto,
           requestOptions
         );
         const data = await response.json();

@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import image from '../assets/worker.jpg';
+import { URL_SERVICIOS } from './config/config';
+
 
 const LoginPage = ({ setLogeado }) => {
   const user = JSON.parse(window.localStorage.getItem('user'));
@@ -38,7 +40,7 @@ const LoginPage = ({ setLogeado }) => {
       body: JSON.stringify(user),
     };
     const response = await fetch(
-      'http://localhost:4000/api/login',
+      URL_SERVICIOS+'/api/login',
       requestOptions
     );
     const data = await response.json();
