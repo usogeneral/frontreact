@@ -21,7 +21,6 @@ import AdminOfertas from './pages/adminOfertas';
 import EditarExperiencia from './components/modales/editarExperiencia';
 import EditarEstudios from './components/modales/editarEstudios';
 import MisContratos from './pages/misContratos';
-import { URL_SERVICIOS } from './config/config';
 
 const App = () => {
   const user = JSON.parse(window.localStorage.getItem('user'));
@@ -39,8 +38,7 @@ const App = () => {
       },
       body: JSON.stringify(useredit.usuarioDB)
     };
-    const url = URL_SERVICIOS+'/api/usuarios/' + useredit.usuarioDB.uid;
-    const response = await fetch(url, requestOptions);
+    const response = await fetch('https://jobstesis.herokuapp.com/api/usuarios/' + useredit.usuarioDB.uid, requestOptions);
     const data = await response.json();
     if (data.ok) {
       window.localStorage.setItem('user', JSON.stringify(data));
@@ -57,9 +55,8 @@ const App = () => {
         headers: { 'Content-Type': 'application/json' },
       };
       if (logeado) {
-        const url = URL_SERVICIOS+'/api/oferta//usuario/busqueda/' + texto + '/' + user.usuarioDB.uid;
         const response = await fetch(
-          url,
+          'https://jobstesis.herokuapp.com/api/oferta//usuario/busqueda/' + texto + '/' + user.usuarioDB.uid,
           requestOptions
         );
         const data = await response.json();
@@ -67,9 +64,8 @@ const App = () => {
       }
 
       if (!logeado) {
-        const url = URL_SERVICIOS+'/api/oferta/busqueda/' + texto;
         const response = await fetch(
-          url,
+          'https://jobstesis.herokuapp.com/api/oferta/busqueda/' + texto,
           requestOptions
         );
         const data = await response.json();

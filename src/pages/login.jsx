@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import image from '../assets/worker.jpg';
-import { URL_SERVICIOS } from '../config/config';
 
 
 const LoginPage = ({ setLogeado }) => {
@@ -40,7 +39,7 @@ const LoginPage = ({ setLogeado }) => {
       body: JSON.stringify(user),
     };
     const response = await fetch(
-      URL_SERVICIOS+'/api/login',
+      'https://jobstesis.herokuapp.com/api/login',
       requestOptions
     );
     const data = await response.json();
