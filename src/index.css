@@ -1,0 +1,60 @@
+:root{
+  --backgorundColor: #f7fff7;
+  --primary: #1d3557;
+  --secondary: #355070;
+  --alert: #ffe66d;
+  --danger: #ff6b6b;
+  --txtClaro:#fafafa;
+  --oferta:#FDFEFE;
+  --ofertaHover:#F2F3F4;
+}
+body {
+  margin: 0;
+  padding: 0%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--backgorundColor);
+}
+.container-fluid{
+  padding: 0%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.btn-submit{
+  border-style: none;
+  background-color: var(--secondary);
+  padding: 1% 2% ;
+  margin: 10px 10px 10px 1px;
+  border-radius: 5px;
+  color: var(--txtClaro);
+  box-shadow: 0 7px #999;
+}
+.btn-submit:active{
+  box-shadow: 0 4px #666;
+  transform: translateY(4px)
+}
+
+.btn-cancel{
+  border-style: none;
+  background-color: var(--danger);
+  padding: 1% 2% ;
+  margin: 10px 10px 10px 1px;
+  border-radius: 5px;
+  color: var(--txtClaro);
+  box-shadow: 0 7px #999;
+}
+.btn-cancel:active{
+  box-shadow: 0 4px #666;
+  transform: translateY(4px)
+}
+
+textarea{
+  resize: none;
+}

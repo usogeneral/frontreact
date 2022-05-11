@@ -1,0 +1,425 @@
+/*  */
+/* MAIN SECTION *******************************************************************************/
+.main-section {
+  padding-top: 7%;
+}
+.main-section p {
+  color: var(--primary);
+}
+/* FIN MAIN SECTION *******************************************************************************/
+.disable {
+  display: none;
+}
+.visible {
+  display: inherit;
+}
+/* LOGIN PAGE *******************************************************************************/
+.mainlogin {
+  padding-top: 7%;
+  /* background-color: var(--secondary);
+    height: 100vh; */
+}
+.mainlogin .row {
+  margin: 0px;
+}
+.mainlogin .imagen {
+  padding: 0%;
+  height: 370px;
+}
+.mainlogin .imagen img {
+  width: 100%;
+}
+.mainlogin .formulario {
+  padding: 0%;
+  background-color: var(--primary);
+  height: 370px;
+}
+.login-form {
+  padding: 3%;
+}
+.login-form h3 {
+  text-align: center;
+  color: var(--txtClaro);
+}
+.login-form label {
+  color: var(--txtClaro);
+}
+.login-form p {
+  color: var(--txtClaro);
+}
+.login-form button {
+  border-style: none;
+  background-color: var(--secondary);
+  padding: 1% 2%;
+  margin: 2%;
+  border-radius: 5px;
+  color: var(--txtClaro);
+}
+.login-form .link {
+  text-decoration: none;
+  color: var(--txtClaro);
+  font-size: 1.3em;
+}
+.login-form .link:hover {
+  color: var(--alert);
+  font-size: 1.4em;
+  border: 1px solid var(--alert);
+  padding: 1.4%;
+  border-radius: 10px;
+}
+/* FIN LOGIN PAGE *******************************************************************************/
+
+/* PERFIL PAGE */
+.main-perfil {
+  padding-top: 7%;
+  display: flex;
+  justify-content: center;
+}
+.perfil {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: var(--primary);
+}
+.perfil h1,
+h2,
+p,
+a,
+span {
+  color: var(--txtClaro);
+}
+.perfil .telefono {
+  color: var(--txtClaro) !important;
+}
+.perfil a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.perfil a:hover {
+  color: var(--txtClaro);
+}
+.skills .habilidad {
+  color: var(--txtClaro) !important;
+}
+.redes-sociales {
+  margin-top: 10px;
+}
+.redes-sociales span a,
+i {
+  color: var(--txtClaro) !important;
+}
+.perfil img {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+}
+.perfil p {
+  margin-bottom: 1%;
+}
+.experiencia-perfil .marco {
+  border: solid 1px var(--primary);
+  padding: 20px;
+}
+.marco {
+  text-align: center;
+}
+.marco h2 {
+  color: var(--primary) !important;
+}
+.estudios-perfil .marco {
+  border: solid 1px var(--primary);
+  padding: 20px;
+}
+.experiencia-perfil p {
+  color: var(--primary);
+}
+.estudios-perfil p {
+  color: var(--primary);
+}
+.contactame {
+  color: var(--alert);
+  font-weight: bold;
+}
+.perfil a:hover {
+  color: var(--alert);
+}
+/* FIN PERFIL PAGE *******************************************************************************/
+
+/* MAIN DASHBOARD *******************************************************************************/
+.main-dashboard {
+  padding-top: 7%;
+}
+.main-dashboard h2 {
+  color: var(--primary);
+}
+.listaOfertasMain {
+  margin-bottom: 10%;
+}
+
+/* FIN MAIN DASHBOARD *******************************************************************************/
+
+/* OFERTA PAGE *******************************************************************************/
+.main-oferta {
+  padding-top: 10%;
+}
+.main-oferta .usuario {
+  color: var(--primary);
+}
+.main-oferta p {
+  color: var(--primary);
+}
+.body-oferta p {
+  color: var(--primary);
+}
+.personas h2 {
+  color: var(--primary);
+}
+.body-oferta button {
+  border-style: none;
+  background-color: var(--secondary);
+  padding: 1% 2%;
+  margin: 10px 10px 10px 1px;
+  border-radius: 5px;
+  color: var(--txtClaro);
+  box-shadow: 0 7px #999;
+}
+.body-oferta button:active {
+  box-shadow: 0 4px #666;
+  transform: translateY(4px);
+}
+/* FIN OFERTA PAGE *******************************************************************************/
+
+/* REGISTRO PAGE *******************************************************************************/
+.main-registro {
+  padding-top: 7%;
+}
+.main-registro .imagen {
+  padding: 0%;
+  height: 450px;
+}
+.main-registro .imagen img {
+  width: 100%;
+  height: 100%;
+}
+.main-registro .formulario {
+  background-color: var(--primary);
+  padding: 0%;
+}
+/* FIN REGISTRO PAGE *******************************************************************************/
+
+/* EDITAR PERFIL ***********************************************************************************/
+.main-editar-perfil {
+  padding-top: 7%;
+}
+.img-perfil {
+  text-align: center;
+}
+.img-perfil img {
+  width: 100px;
+}
+.redes-sociales i {
+  font-size: 30px;
+  color: var(--primary);
+  margin-left: 5px;
+}
+.redes-sociales i:hover {
+  color: var(--secondary);
+}
+.habilidades {
+  margin-bottom: 5px;
+}
+.habilidades button {
+  padding: 0%;
+}
+.skills {
+  margin-top: 20px;
+}
+.skills span {
+  margin-right: 15px;
+  padding: 0%;
+}
+.skills span i {
+  font-size: 20px;
+  padding: 0%;
+  margin: 0%;
+}
+.informacion {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.informacion h1 {
+  text-align: center;
+}
+
+.informacion .experiencia .data {
+  padding: 10px;
+  background-color: #e5e7e9;
+  text-align: justify;
+}
+.informacion .estudios .data {
+  background-color: #e5e7e9;
+  text-align: justify;
+  padding: 10px;
+}
+.form-group {
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+.form-group label {
+  margin-right: 10px;
+}
+.form-group i {
+  font-size: 1.8em;
+  margin-top: 5px;
+  color: var(--secondary) !important;
+}
+.form-group .txtSocial {
+  width: 300px;
+}
+
+.datosGenerales {
+  margin-bottom: 3%;
+}
+
+.habilidades .btn-submit {
+  padding: 0.5% 1% 0.5% 1%;
+}
+.habilidades .habilidad {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.experiencia,
+.estudios,
+.redesSociales {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.experiencia h1 {
+  margin-bottom: 25px;
+}
+.experiencia .table {
+  margin-top: 20px;
+}
+
+.estudios h1 {
+  margin-bottom: 25px;
+}
+.estudios .table {
+  margin-top: 20px;
+}
+/* EDITAR PERFIL ***********************************************************************************/
+/* VISUALIZAR OFERTA ******************************************************************************/
+.visualizar-oferta {
+  padding-top: 7%;
+}
+.linkUser {
+  text-decoration: none;
+  font-size: 2em;
+}
+/* FIN VISUALIZAR OFERTA ******************************************************************************/
+.biografia {
+  margin-top: 20px;
+}
+.notfound {
+  padding-top: 1%;
+  text-align: center;
+}
+.notfound img {
+  width: 60%;
+}
+
+/* DASHBOARD ADMIN *************************************************************************************/
+.main-admin {
+  padding-top: 10%;
+}
+.table {
+  width: 100%;
+}
+.img-table {
+  width: 100px;
+}
+/* FIN DASHBOARD ADMIN *************************************************************************************/
+.main-contratos {
+  padding-top: 10%;
+}
+.main-contratos h2 {
+  color: var(--primary);
+}
+
+.main-tabla .dropdown-menu .dropdown-item a {
+  color: var(--txtClaro) !important;
+  text-decoration: none;
+}
+.main-tabla .dropdown-menu .dropdown-item:hover {
+  background-color: var(--primary);
+}
+.dropdown-menu {
+  position: fixed !important;
+  min-width: 5rem !important;
+  background-color: var(--secondary);
+}
+.main-tabla .btn-secondary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.main-tabla .btn-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+.main-tabla h2 {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 10%;
+  }
+}
+
+.spanPass {
+  cursor: pointer;
+  font-weight: bold;
+}
+.spanPass i {
+  color: var(--primary) !important;
+  font-size: 1.2em;
+}
+
+.listaCategoria {
+  position: fixed;
+}
+
+.skills h3 {
+  color: var(--txtClaro) !important;
+}
+
+.btnRegresar{
+  background-color: transparent;
+  border-style: none;
+  color: var(--primary);
+  margin-top: 2%;
+  margin-left: 10%;
+}
+.btnRegresar i{
+  color: var(--primary) !important;
+}
+
+.btnRegresarDash{
+  background-color: transparent;
+  border-style: none;
+  color: var(--primary);
+  margin-top: 2%;
+}
+.btnRegresarDash i{
+  padding: 0.5% 1% 0.5% 1%;
+  color: var(--primary) !important;
+}
+
+.eye{
+  background-color: rgb(186, 187, 187);
+  padding: 1%;
+}
+.eye a{
+  color: var(--primary);
+  cursor: pointer;
+}

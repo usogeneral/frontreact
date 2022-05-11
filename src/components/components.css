@@ -1,0 +1,246 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+small {
+  color: var(--primary);
+}
+
+/* NAVBAR */
+.menu-bar {
+  background-color: var(--primary);
+  padding-left: 8px;
+  padding-right: 8px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.navbar-brand,
+.nav-link {
+  color: var(--txtClaro);
+}
+.navbar-brand:hover {
+  color: #cfd4d4;
+}
+.nav-link:hover {
+  color: #cfd4d4;
+  /* background-color: var(--secondary); */
+}
+.navbar-toggler-icon {
+  color: var(--txtClaro);
+}
+
+.navbar-toggler-icon i {
+  font-size: 30px;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+/* LISTA DE OFERTAS ***************************************************************************************/
+.oferta {
+  background-color: var(--oferta);
+  width: 100%;
+  padding: 2%;
+  border: 2px solid var(--ofertaHover);
+  box-shadow: 2px 2px 5px #999;
+}
+.oferta:hover {
+  background-color: var(--ofertaHover);
+}
+.oferta p {
+  text-align: justify;
+}
+.oferta small, span{
+  color: var(--primary) !important;
+}
+.oferta button {
+  border-style: none;
+  background-color: var(--secondary);
+  padding: 1% 2%;
+  margin: 10px 10px 10px 1px;
+  border-radius: 5px;
+  color: var(--txtClaro);
+  box-shadow: 0 7px #999;
+}
+.oferta button:active {
+  box-shadow: 0 4px #666;
+  transform: translateY(4px);
+}
+.oferta button i {
+  font-size: 1.5em;
+  color: var(--txtClaro);
+}
+
+.oferta i {
+  font-size: 3em;
+  float: left;
+  margin-right: 10px;
+  border-radius: 10px;
+  color: var(--primary);
+}
+.oferta .link {
+  color: var(--primary);
+  text-decoration: none;
+}
+/* FIN LISTA OFERTAS  ***********************************************************************************/
+
+/* INICIO LISTA PERSONAS  ***********************************************************************************/
+.lista-personas {
+  margin-top: 4%;
+  padding: 0%;
+}
+.lista-personas img {
+  padding: 0%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+.lista-personas .nombres-apellidos {
+  padding: 0%;
+}
+.lista-personas button{
+  padding: 5px;
+}
+.lista-personas .link{
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1.4em;
+}
+
+/* FIN LISTA PERSONAS  ***********************************************************************************/
+
+/* TABLA OFERTA ***********************************************************************************************************************/
+.btnLink {
+  padding: 3%;
+}
+.btnLink i {
+  font-size: 25px;
+  color: var(--secondary) !important;
+}
+.buttonDelete {
+  padding: 3%;
+  border-style: none;
+  background-color: var(--danger) !important;
+  color: var(--txtClaro);
+}
+.btnDelete {
+  padding: 3%;
+  border-style: none;
+  background-color: transparent;
+}
+.btnDelete i {
+  font-size: 25px;
+  color: var(--danger) !important;
+}
+
+/* TABLA OFERTA ***********************************************************************************************************************/
+
+/* AÑADIR OFERTA *********************************************************************************************************************/
+.main-añadir-oferta {
+  padding: 7%;
+  color: var(--primary);
+}
+
+.main-añadir-oferta .añadir-oferta-form .btnAddOferta {
+  margin-top: 2%;
+  border-style: none;
+  color: var(--txtClaro);
+  background-color: var(--primary);
+  padding: 2%;
+}
+
+/* FIN AÑADIR OFERTA *********************************************************************************************************************/
+
+/* SIDEBAR *****************************************************************************************************************************/
+.sidebar {
+  background-color: var(--primary);
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  padding-top: 7%;
+}
+.sidebar hr {
+  background-color: var(--txtClaro);
+}
+.sidebar ul li {
+  padding: 3% 3% 3% 7%;
+}
+.sidebar ul li a {
+  color: var(--txtClaro);
+  cursor: pointer;
+  text-decoration: none;
+}
+.sidebar ul li:hover {
+  background-color: var(--secondary);
+}
+.sidebar .cerrar-sesion {
+  border-style: none;
+  background-color: transparent;
+  color: var(--txtClaro);
+  padding: 0%;
+}
+/* FIN DEL SIDEBAR *****************************************************************************************************************************/
+
+@media (max-width: 768px) {
+  .oferta {
+    padding: 5%;
+  }
+  .sidebar {
+    margin-left: -200px;
+  }
+}
+
+.modal-body p{
+  color: var(--primary);
+}
+@media (min-width: 1300px) {
+  .txtBusqueda{
+    width: 500px;
+  }
+}
+.btnSideBar{
+  border: none;
+  background-color: transparent;
+  color: var(--txtClaro);
+}
+
+.btnSearch{
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+
+.btnSearch:hover{
+  border-color: var(--alert);
+  background-color: var(--alert);
+}
+
+.telefono-modal{
+  color: var(--primary) !important;
+  text-decoration: none;
+}
+
+.telefono-modal:hover{
+  color: var(--primary) !important;
+  text-decoration: none;
+}
+
+.social{
+  color: var(--primary) !important;
+}
+
+.contacto{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnCancel{
+  margin-top: 2%;
+  border-style: none;
+  color: var(--txtClaro);
+  background-color: var(--danger);
+  padding: 2%;
+  margin-left: 2%;
+}
