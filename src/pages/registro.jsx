@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import image from '../assets/worker.jpg';
 import { useHistory } from 'react-router-dom';
+import { URL_SERVICIOS } from '../config/config';
 
 const Registro = () => {
   const user = JSON.parse(window.localStorage.getItem('user'));
@@ -115,7 +116,7 @@ const Registro = () => {
       body: JSON.stringify(usuario),
     };
     const response = await fetch(
-      'http://localhost:4000/api/usuarios',
+      URL_SERVICIOS+'/api/usuarios',
       requestOptions
     );
     const data = await response.json();

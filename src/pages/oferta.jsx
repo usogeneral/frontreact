@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import moment from 'moment';
 import 'moment/locale/es';
+import { URL_SERVICIOS } from '../config/config';
 
 const Oferta = ({ location, logeado }) => {
   const history = useHistory();
@@ -39,7 +40,7 @@ const Oferta = ({ location, logeado }) => {
           body: JSON.stringify(oferta),
         };
         const response = await fetch(
-          'http://localhost:4000/api/postulante/' + oferta._id,
+          URL_SERVICIOS+'/api/postulante/' + oferta._id,
           requestOptions
         );
         const data = await response.json();

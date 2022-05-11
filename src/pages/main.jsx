@@ -6,6 +6,7 @@ import 'moment/locale/es';
 
 import ListaOfertas from '../components/listaOfertas';
 import './pages.css';
+import { URL_SERVICIOS } from '../config/config';
 
 const Main = ({ logeado, busqueda }) => {
   moment.locale('es');
@@ -22,7 +23,7 @@ const Main = ({ logeado, busqueda }) => {
     };
     if (!logeado) {
       const response = await fetch(
-        'http://localhost:4000/api/oferta',
+        URL_SERVICIOS+'/api/oferta',
         requestOptions
       );
       const data = await response.json();
@@ -31,7 +32,7 @@ const Main = ({ logeado, busqueda }) => {
 
     if (logeado) {
       const response = await fetch(
-        'http://localhost:4000/api/oferta/usuario/get-ofertas/' +
+        URL_SERVICIOS+'/api/oferta/usuario/get-ofertas/' +
           user.usuarioDB.uid,
         requestOptions
       );
@@ -71,7 +72,7 @@ const Main = ({ logeado, busqueda }) => {
           body: JSON.stringify(oferta),
         };
         const response = await fetch(
-          'http://localhost:4000/api/postulante/' + oferta._id,
+          URL_SERVICIOS+'/api/postulante/' + oferta._id,
           requestOptions
         );
         const data = await response.json();
@@ -164,7 +165,7 @@ const Main = ({ logeado, busqueda }) => {
     };
     if (logeado) {
       const response = await fetch(
-        'http://localhost:4000/api/oferta/usuario/categoria/' +
+        URL_SERVICIOS+'/api/oferta/usuario/categoria/' +
           radio +
           '/' +
           user.usuarioDB.uid,
@@ -176,7 +177,7 @@ const Main = ({ logeado, busqueda }) => {
 
     if (!logeado) {
       const response = await fetch(
-        'http://localhost:4000/api/oferta/busqueda/categoria/' + radio,
+        URL_SERVICIOS+'/api/oferta/busqueda/categoria/' + radio,
         requestOptions
       );
       const data = await response.json();

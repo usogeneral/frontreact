@@ -6,6 +6,7 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 const { SearchBar, ClearSearchButton } = Search;
+import { URL_SERVICIOS } from '../config/config';
 
 
 const Dashboard = ({ setLogeado, logeado, cargar }) => {
@@ -20,7 +21,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
       body: JSON.stringify({ token: user.token }),
     };
     const response = await fetch(
-      'http://localhost:4000/api/usuarios/validar/token',
+      URL_SERVICIOS+'/api/usuarios/validar/token',
       requestOptions
     );
     const resp = await response.json();
@@ -87,7 +88,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
           'x-token': user.token
         }
       };
-      const response = await fetch('http://localhost:4000/api/oferta/' + oferta._id, requestOptions);
+      const response = await fetch(URL_SERVICIOS+'/api/oferta/' + oferta._id, requestOptions);
       const data = await response.json();
       if (data.ok) {
         alert("Se ha eliminado exitosamente");
@@ -122,7 +123,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
       body: JSON.stringify(data),
     };
     const response = await fetch(
-      'http://localhost:4000/api/oferta',
+      URL_SERVICIOS+'/api/oferta',
       requestOptions
     );
     const dataREs = await response.json();
@@ -141,7 +142,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
         headers: { 'Content-Type': 'application/json' },
       };
       const response = await fetch(
-        'http://localhost:4000/api/oferta/usuario/' + user.usuarioDB.uid,
+        URL_SERVICIOS+'/api/oferta/usuario/' + user.usuarioDB.uid,
         requestOptions
       );
       const data = await response.json();

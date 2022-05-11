@@ -5,6 +5,8 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import { useHistory } from 'react-router-dom';
 import Sidebar from '../components/sidebar';
 const { SearchBar, ClearSearchButton } = Search;
+import { URL_SERVICIOS } from '../config/config';
+
 
 const AdminOfertas = ({ setLogeado }) => {
     const user = JSON.parse(window.localStorage.getItem('user'));
@@ -76,7 +78,7 @@ const AdminOfertas = ({ setLogeado }) => {
             headers: { 'Content-Type': 'application/json' },
         };
         const response = await fetch(
-            'http://localhost:4000/api/oferta/admin/ofertas',
+            URL_SERVICIOS+'/api/oferta/admin/ofertas',
             requestOptions
         );
         const data = await response.json();
@@ -93,7 +95,7 @@ const AdminOfertas = ({ setLogeado }) => {
             body: JSON.stringify(oferta),
         };
         const response = await fetch(
-            'http://localhost:4000/api/oferta/' + oferta._id,
+            URL_SERVICIOS+'/api/oferta/' + oferta._id,
             requestOptions
         );
         const data = await response.json();

@@ -5,9 +5,10 @@ import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import TablaEstudios from '../components/tablaEstudios';
 import TabalaExperiencia from '../components/tablaExperiencia';
+import { URL_SERVICIOS } from '../config/config';
 
 const EditarPerfil = ({ setLogeado, cargar }) => {
-  const imgURL = 'http://localhost:4000/uploads/';
+  const imgURL = URL_SERVICIOS+'/uploads/';
   const user = JSON.parse(window.localStorage.getItem('user'));
   const history = useHistory();
   const [usuario, setUsuario] = useState({});
@@ -137,7 +138,7 @@ const EditarPerfil = ({ setLogeado, cargar }) => {
       body: JSON.stringify(useredit.usuarioDB),
     };
     const response = await fetch(
-      'http://localhost:4000/api/usuarios/' + useredit.usuarioDB.uid,
+      URL_SERVICIOS+'/api/usuarios/' + useredit.usuarioDB.uid,
       requestOptions
     );
     const data = await response.json();
@@ -165,7 +166,7 @@ const EditarPerfil = ({ setLogeado, cargar }) => {
       body: JSON.stringify(password),
     };
     const response = await fetch(
-      'http://localhost:4000/api/usuarios/cambio/' + useredit.usuarioDB.uid,
+      URL_SERVICIOS+'/api/usuarios/cambio/' + useredit.usuarioDB.uid,
       requestOptions
     );
     const data = await response.json();
@@ -215,7 +216,7 @@ const EditarPerfil = ({ setLogeado, cargar }) => {
       body: files,
     };
     const response = await fetch(
-      'http://localhost:4000/api/upload/usuarios/' + user.usuarioDB.uid,
+      URL_SERVICIOS+'/api/upload/usuarios/' + user.usuarioDB.uid,
       requestOptions
     );
     const data = await response.json();

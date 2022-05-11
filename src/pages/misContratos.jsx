@@ -6,6 +6,7 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import DatosUsuario from '../components/modales/datosUsuario';
 const { SearchBar, ClearSearchButton } = Search;
+import { URL_SERVICIOS } from '../config/config';
 
 const MisContratos = ({ setLogeado, logeado }) => {
   const user = JSON.parse(window.localStorage.getItem('user'));
@@ -71,7 +72,7 @@ const MisContratos = ({ setLogeado, logeado }) => {
         headers: { 'Content-Type': 'application/json' },
       };
       const response = await fetch(
-        'http://localhost:4000/api/oferta/busqueda/contratos/usuario/' +
+        URL_SERVICIOS+'/api/oferta/busqueda/contratos/usuario/' +
           user.usuarioDB.uid,
         requestOptions
       );

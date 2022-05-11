@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 
 import image from '../assets/worker.jpg';
+import { URL_SERVICIOS } from '../config/config';
 
 function ReseteoPassword() {
   const user = JSON.parse(window.localStorage.getItem('user'));
@@ -30,7 +31,7 @@ function ReseteoPassword() {
       body: JSON.stringify(user),
     };
     const response = await fetch(
-      'http://localhost:4000/api/resetear-password',
+      URL_SERVICIOS+'/api/resetear-password',
       requestOptions
     );
     const data = await response.json();

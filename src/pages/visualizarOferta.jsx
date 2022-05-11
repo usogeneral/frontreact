@@ -5,6 +5,7 @@ import 'moment/locale/es';
 
 import ListaPersonas from '../components/listaPersonas';
 import Sidebar from '../components/sidebar';
+import { URL_SERVICIOS } from '../config/config';
 
 const VisualizarOferta = ({ setLogeado, location }) => {
   moment.locale('es');
@@ -33,7 +34,7 @@ const VisualizarOferta = ({ setLogeado, location }) => {
       body: JSON.stringify(oferta),
     };
     const response = await fetch(
-      'http://localhost:4000/api/oferta/' + oferta._id,
+      URL_SERVICIOS+'/api/oferta/' + oferta._id,
       requestOptions
     );
     const data = await response.json();

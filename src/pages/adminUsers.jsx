@@ -5,11 +5,12 @@ import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import Sidebar from '../components/sidebar';
 const { SearchBar, ClearSearchButton } = Search;
+import { URL_SERVICIOS } from '../config/config';
 
 const AdminUsers = ({ setLogeado }) => {
     const user = JSON.parse(window.localStorage.getItem('user'));
     const [usuarios, setUsuarios] = useState([])
-    const imgURL = "http://localhost:4000/uploads/";
+    const imgURL = URL_SERVICIOS+"/uploads/";
 
     const history = useHistory();
     if (user == null) {
@@ -104,7 +105,7 @@ const AdminUsers = ({ setLogeado }) => {
             headers: { 'Content-Type': 'application/json' },
         };
         const response = await fetch(
-            'http://localhost:4000/api/usuarios/obtener/usuarios/' + user.usuarioDB.uid,
+            URL_SERVICIOS+'/api/usuarios/obtener/usuarios/' + user.usuarioDB.uid,
             requestOptions
         );
         const data = await response.json();
@@ -121,7 +122,7 @@ const AdminUsers = ({ setLogeado }) => {
             body: JSON.stringify(useredit),
         };
         const response = await fetch(
-            'http://localhost:4000/api/usuarios/' + useredit.uid,
+            URL_SERVICIOS+'/api/usuarios/' + useredit.uid,
             requestOptions
         );
         const data = await response.json();
@@ -152,7 +153,7 @@ const AdminUsers = ({ setLogeado }) => {
             },
         };
         const response = await fetch(
-            'http://localhost:4000/api/oferta/bloquear/usuario/' + userBloqueado.uid,
+            URL_SERVICIOS+'/api/oferta/bloquear/usuario/' + userBloqueado.uid,
             requestOptions
         );
         const data = await response.json();
@@ -184,7 +185,7 @@ const AdminUsers = ({ setLogeado }) => {
             body: JSON.stringify(oferta),
         };
         const response = await fetch(
-            'http://localhost:4000/api/oferta/' + oferta._id,
+            URL_SERVICIOS+'/api/oferta/' + oferta._id,
             requestOptions
         );
         const data = await response.json();

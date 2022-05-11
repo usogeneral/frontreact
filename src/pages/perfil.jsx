@@ -1,12 +1,13 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
+import { URL_SERVICIOS } from '../config/config';
 
 
 const Perfil = ({ location }) => {
   const history = useHistory();
   const linkwhatsapp = 'https://web.whatsapp.com/send?phone=593';
   const userID = location.state.user;
-  const imgURL = 'http://localhost:4000/uploads/';
+  const imgURL = URL_SERVICIOS+'/uploads/';
   const [celular, setcelular] = useState("")
   const [user, setUser] = useState({
     img: '',
@@ -53,7 +54,7 @@ const Perfil = ({ location }) => {
         headers: { 'Content-Type': 'application/json' },
       };
       const response = await fetch(
-        'http://localhost:4000/api/usuarios/' + userID,
+        URL_SERVICIOS+'/api/usuarios/' + userID,
         requestOptions
       );
       const data = await response.json();
