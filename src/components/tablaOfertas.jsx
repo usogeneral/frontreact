@@ -1,6 +1,6 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { URL_SERVICIOS } from '../config/config';
 
 const TablaOfertas = ({ oferta, metodoCargarDatos }) => {
   const user = JSON.parse(window.localStorage.getItem('user'));

@@ -1,7 +1,7 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment } from 'react';
 import './components.css';
 import { Link } from 'react-router-dom';
-import { URL_SERVICIOS } from '../config/config';
 
 const ListaOfertas = ({ oferta, logeado }) => {
 

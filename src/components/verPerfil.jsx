@@ -1,7 +1,7 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 import Sidebar from './sidebar';
-import { URL_SERVICIOS } from '../config/config';
 
 const VerPerfil = ({ logeado, setLogeado }) => {
   const history = useHistory();

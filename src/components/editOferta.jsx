@@ -1,7 +1,7 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Sidebar from './sidebar';
-import { URL_SERVICIOS } from '../config/config';
 
 const EditarOferta = ({ location, setLogeado, setCargar }) => {
   const history = useHistory();

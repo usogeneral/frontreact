@@ -1,3 +1,4 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment, useEffect, useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import BootstrapTable from 'react-bootstrap-table-next';
@@ -6,7 +7,6 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import Sidebar from './sidebar';
 import DatosUsuario from './modales/datosUsuario';
 const { SearchBar, ClearSearchButton } = Search;
-import { URL_SERVICIOS } from '../config/config';
 
 const Contratos = ({ setLogeado }) => {
   const user = JSON.parse(window.localStorage.getItem('user'));

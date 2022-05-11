@@ -1,6 +1,6 @@
+import { URL_SERVICIOS } from '../config/config';
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { URL_SERVICIOS } from '../config/config';
 
 const ListaPersonas = ({ persona, metodoContratar }) => {
     const imgURL = URL_SERVICIOS+"/uploads/";
