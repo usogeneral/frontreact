@@ -39,7 +39,8 @@ const App = () => {
       },
       body: JSON.stringify(useredit.usuarioDB)
     };
-    const response = await fetch(URL_SERVICIOS+'/api/usuarios/' + useredit.usuarioDB.uid, requestOptions);
+    const url = URL_SERVICIOS+'/api/usuarios/' + useredit.usuarioDB.uid;
+    const response = await fetch(url, requestOptions);
     const data = await response.json();
     if (data.ok) {
       window.localStorage.setItem('user', JSON.stringify(data));
@@ -56,8 +57,9 @@ const App = () => {
         headers: { 'Content-Type': 'application/json' },
       };
       if (logeado) {
+        const url = URL_SERVICIOS+'/api/oferta//usuario/busqueda/' + texto + '/' + user.usuarioDB.uid;
         const response = await fetch(
-          URL_SERVICIOS+'/api/oferta//usuario/busqueda/' + texto + '/' + user.usuarioDB.uid,
+          url,
           requestOptions
         );
         const data = await response.json();
@@ -65,8 +67,9 @@ const App = () => {
       }
 
       if (!logeado) {
+        const url = URL_SERVICIOS+'/api/oferta/busqueda/' + texto;
         const response = await fetch(
-          URL_SERVICIOS+'/api/oferta/busqueda/' + texto,
+          url,
           requestOptions
         );
         const data = await response.json();
