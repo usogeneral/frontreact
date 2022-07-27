@@ -129,7 +129,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
     const dataREs = await response.json();
     if (dataREs.ok) {
       console.log(dataREs.medico);
-      enviarNotificacionCrearOferta(dataREs.ofertas._id);
+      enviarNotificacionCrearOferta(dataREs.medico._id.toString());
       alert("Su Oferta ha sido creada exitosamente");
     } else {
       alert("Su oferta no se pudo crear");
@@ -148,6 +148,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
         requestOptions
       );
       const data = await response.json();
+      console.log('RESPUES?tA: '+data)
      
     }
   };
