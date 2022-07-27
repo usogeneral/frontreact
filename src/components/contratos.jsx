@@ -116,7 +116,7 @@ const Contratos = ({ setLogeado }) => {
 
   const finalizarContrato = async (oferta) => {
 
-    console.log(oferta.interesados._id)
+    console.log(oferta.interesados)
 
     /*const requestOptions = {
       method: 'PUT',
