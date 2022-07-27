@@ -119,7 +119,7 @@ const Contratos = ({ setLogeado }) => {
     console.log(oferta.interesados[0].postulante)
     //enviarNotificacionCrearOfertaContrato(oferta.interesados.postulante.toString(), oferta.titulo.toString(), 'fincontrato');
 
-    /*const requestOptions = {
+    const requestOptions = {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -135,11 +135,11 @@ const Contratos = ({ setLogeado }) => {
     if (data.ok) {
       console.log(postulante);
       alert('Se ha actualizado correctamente');
-      enviarNotificacionCrearOfertaContrato(personaID.toString(), oferta.titulo.toString(), 'fincontrato');
+      enviarNotificacionCrearOfertaContrato(oferta.interesados[0].postulante.toString(), oferta.titulo.toString(), 'fincontrato');
     } else {
       alert('No se logro actualizar el registro');
     }
-    cargarOfertasContratos();*/
+    cargarOfertasContratos();
   };
 
 
