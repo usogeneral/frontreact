@@ -116,7 +116,7 @@ const Contratos = ({ setLogeado }) => {
 
   const finalizarContrato = async (oferta) => {
 
-    console.log(oferta.interesados)
+    console.log(oferta)
     //enviarNotificacionCrearOfertaContrato(oferta.interesados.postulante.toString(), oferta.titulo.toString(), 'fincontrato');
 
     /*const requestOptions = {
