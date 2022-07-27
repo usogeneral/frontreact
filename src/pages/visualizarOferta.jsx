@@ -38,11 +38,11 @@ const VisualizarOferta = ({ setLogeado, location }) => {
       requestOptions
     );
     const data = await response.json();
-    console.log('INTERESADOL: '+personaID);
+    //console.log('INTERESADOL: '+personaID);
     if (data.ok) {
       enviarNotificacionCrearOfertaContrato(personaID.toString(), oferta.titulo.toString(), 'contrato');
       alert('Se ha contratado a la persona exitosamente.');
-      //history.push('/dashboard/contratos');
+      history.push('/dashboard/contratos');
     } else {
       alert('No se logro contratar a la persona');
     }
@@ -58,7 +58,7 @@ const VisualizarOferta = ({ setLogeado, location }) => {
         requestOptions
       );
       const data = await response.json();
-      console.log('RESPUES?tA: '+data.ok)
+      //console.log('RESPUES?tA: '+data.ok)
      
   };
 

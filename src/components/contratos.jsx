@@ -115,7 +115,10 @@ const Contratos = ({ setLogeado }) => {
   };
 
   const finalizarContrato = async (oferta) => {
-    const requestOptions = {
+
+    console.log(oferta.interesados._id)
+
+    /*const requestOptions = {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -129,12 +132,30 @@ const Contratos = ({ setLogeado }) => {
     );
     const data = await response.json();
     if (data.ok) {
+      console.log(postulante);
       alert('Se ha actualizado correctamente');
+      enviarNotificacionCrearOfertaContrato(personaID.toString(), oferta.titulo.toString(), 'fincontrato');
     } else {
       alert('No se logro actualizar el registro');
     }
-    cargarOfertasContratos();
+    cargarOfertasContratos();*/
   };
+
+
+  const enviarNotificacionCrearOfertaContrato = async (idUsuario, tituloOferta, tipoNotificacion) => {
+    const requestOptions = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    };
+    const response = await fetch(
+      URL_SERVICIOS+'/api/usuarios/notificacion-contratar/'+idUsuario+'/pushed/'+tituloOferta+'/'+tipoNotificacion,
+      requestOptions
+    );
+    const data = await response.json();
+    //console.log('RESPUES?tA: '+data.ok)
+   
+};
+
 
   const finalizar = (oferta) => {
     var response = window.confirm('Esta seguro de finalizar el contrato?');
