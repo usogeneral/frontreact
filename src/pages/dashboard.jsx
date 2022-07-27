@@ -129,11 +129,33 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
     const dataREs = await response.json();
     if (dataREs.ok) {
       alert("Su Oferta ha sido creada exitosamente");
+      enviarNotificacionCrearOferta();
     } else {
       alert("Su oferta no se pudo crear");
     }
     cargarOfertasByUser();
   };
+
+  const enviarNotificacionCrearOferta = async () => {
+    if (user != null) {
+      const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+      };
+      const response = await fetch(
+        URL_SERVICIOS+'/api/oferta/notificacion-usuario/'+user.usuarioDB.uid+'/pushed',
+        requestOptions
+      );
+      const data = await response.json();
+      if (data.ok) {
+        alert("Notificación enviada");
+      } else {
+        alert("Notificación no enviada");
+      }
+    }
+  };
+
+
 
   const cargarOfertasByUser = async () => {
     if (user != null) {
