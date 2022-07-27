@@ -44,7 +44,7 @@ const App = () => {
     const data = await response.json();
     if (data.ok) {
       window.localStorage.setItem('user', JSON.stringify(data));
-      alert("Se actualizarón los datos");
+      alert("Se actualizaron los datos");
     } else {
       alert("No se pudo actualizar la información");
     }
