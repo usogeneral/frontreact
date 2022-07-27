@@ -148,7 +148,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
         requestOptions
       );
       const data = await response.json();
-      console.log('RESPUES?tA: '+data)
+      console.log('RESPUES?tA: '+data.ok)
      
     }
   };
