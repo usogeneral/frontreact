@@ -38,9 +38,9 @@ const VisualizarOferta = ({ setLogeado, location }) => {
       requestOptions
     );
     const data = await response.json();
-    console.log('INTERESADOL: '+interesados);
+    console.log('INTERESADOL: '+personaID);
     if (data.ok) {
-      enviarNotificacionCrearOfertaContrato(user.usuarioDB.uid.toString(), oferta.titulo.toString(), 'contrato');
+      enviarNotificacionCrearOfertaContrato(personaID.toString(), oferta.titulo.toString(), 'contrato');
       alert('Se ha contratado a la persona exitosamente.');
       //history.push('/dashboard/contratos');
     } else {
