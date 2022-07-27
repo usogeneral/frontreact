@@ -40,7 +40,7 @@ const VisualizarOferta = ({ setLogeado, location }) => {
     const data = await response.json();
     if (data.ok) {
       alert('Se ha contratado a la persona exitosamente.');
-      enviarNotificacionCrearOfertaContrato(user.usuarioDB.uid, oferta.titulo, 'contrato');
+      enviarNotificacionCrearOfertaContrato(user.usuarioDB.uid.toString(), oferta.titulo.toString(), 'contrato');
       history.push('/dashboard/contratos');
     } else {
       alert('No se logro contratar a la persona');
@@ -48,7 +48,6 @@ const VisualizarOferta = ({ setLogeado, location }) => {
   };
 
   const enviarNotificacionCrearOfertaContrato = async (idUsuario, tituloOferta, tipoNotificacion) => {
-    if (ofertId != null) {
       const requestOptions = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
@@ -60,7 +59,6 @@ const VisualizarOferta = ({ setLogeado, location }) => {
       const data = await response.json();
       console.log('RESPUES?tA: '+data.ok)
      
-    }
   };
 
   return (
