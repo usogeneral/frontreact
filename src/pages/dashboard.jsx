@@ -129,7 +129,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
     const dataREs = await response.json();
     if (dataREs.ok) {
       alert("Su Oferta ha sido creada exitosamente");
-      enviarNotificacionCrearOferta();
+      //enviarNotificacionCrearOferta();
     } else {
       alert("Su oferta no se pudo crear");
     }
