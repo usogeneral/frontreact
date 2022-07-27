@@ -40,9 +40,26 @@ const VisualizarOferta = ({ setLogeado, location }) => {
     const data = await response.json();
     if (data.ok) {
       alert('Se ha contratado a la persona exitosamente.');
+      enviarNotificacionCrearOferta(user.usuarioDB.uid, oferta.titulo, 'contrato');
       history.push('/dashboard/contratos');
     } else {
       alert('No se logro contratar a la persona');
+    }
+  };
+
+  const enviarNotificacionCrearOferta = async (idUsuario, tituloOferta, tipoNotificacion) => {
+    if (ofertId != null) {
+      const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+      };
+      const response = await fetch(
+        URL_SERVICIOS+'/api/usuarios/notificacion-contratar/'+idUsuario+'/pushed/'+tituloOferta+'/'+tipoNotificacion,
+        requestOptions
+      );
+      const data = await response.json();
+      console.log('RESPUES?tA: '+data.ok)
+     
     }
   };
 
