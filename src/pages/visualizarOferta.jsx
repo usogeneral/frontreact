@@ -38,10 +38,11 @@ const VisualizarOferta = ({ setLogeado, location }) => {
       requestOptions
     );
     const data = await response.json();
+    console.log('INTERESADOL: '+interesados);
     if (data.ok) {
-      alert('Se ha contratado a la persona exitosamente.');
       enviarNotificacionCrearOfertaContrato(user.usuarioDB.uid.toString(), oferta.titulo.toString(), 'contrato');
-      history.push('/dashboard/contratos');
+      alert('Se ha contratado a la persona exitosamente.');
+      //history.push('/dashboard/contratos');
     } else {
       alert('No se logro contratar a la persona');
     }
