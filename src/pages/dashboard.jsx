@@ -128,7 +128,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
     );
     const dataREs = await response.json();
     if (dataREs.ok) {
-      enviarNotificacionCrearOferta();
+      enviarNotificacionCrearOferta(dataREs.medico._id);
       alert("Su Oferta ha sido creada exitosamente");
     } else {
       alert("Su oferta no se pudo crear");
@@ -136,14 +136,14 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
     cargarOfertasByUser();
   };
 
-  const enviarNotificacionCrearOferta = async () => {
-    if (user != null) {
+  const enviarNotificacionCrearOferta = async (ofertId) => {
+    if (ofertId != null) {
       const requestOptions = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       };
       const response = await fetch(
-        URL_SERVICIOS+'/api/oferta/notificacion-usuario/'+user.usuarioDB.uid+'/pushed',
+        URL_SERVICIOS+'/api/oferta/notificacion-usuario/'+ofertId+'/pushed',
         requestOptions
       );
       const data = await response.json();
