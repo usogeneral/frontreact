@@ -133,7 +133,6 @@ const Contratos = ({ setLogeado }) => {
     );
     const data = await response.json();
     if (data.ok) {
-      console.log(postulante);
       alert('Se ha actualizado correctamente');
       enviarNotificacionCrearOfertaContrato(oferta.interesados[0].postulante.toString(), oferta.titulo.toString(), 'fincontrato');
     } else {
