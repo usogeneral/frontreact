@@ -147,11 +147,7 @@ const Dashboard = ({ setLogeado, logeado, cargar }) => {
         requestOptions
       );
       const data = await response.json();
-      if (data.ok) {
-        alert("Notificación enviada");
-      } else {
-        alert("Notificación no enviada");
-      }
+     
     }
   };
 
